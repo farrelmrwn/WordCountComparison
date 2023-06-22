@@ -109,6 +109,6 @@ RAM : 8,00 GB
 | 1 Gb   | 191.408 S | 51.647 S  |
 | 10 Gb  | 806 S     | 628.307 S |
 ### Grafik
-https://github.com/farrelmrwn/WordCountComparison/assets/87571919/c9192e66-f90e-4985-91e8-f1d628fb9d83
-https://github.com/farrelmrwn/WordCountComparison/assets/87571919/3fb1945f-3236-4448-b659-42bf5fe97736
+(https://github.com/farrelmrwn/WordCountComparison/assets/87571919/c9192e66-f90e-4985-91e8-f1d628fb9d83)
+(https://github.com/farrelmrwn/WordCountComparison/assets/87571919/3fb1945f-3236-4448-b659-42bf5fe97736)
 

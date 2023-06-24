@@ -112,3 +112,16 @@ RAM : 8,00 GB
 ![Screenshot 2023-06-22 145956](https://github.com/farrelmrwn/WordCountComparison/assets/87571919/c9192e66-f90e-4985-91e8-f1d628fb9d83)
 ![Screenshot 2023-06-22 150020](https://github.com/farrelmrwn/WordCountComparison/assets/87571919/3fb1945f-3236-4448-b659-42bf5fe97736)
 
+## Analisis
+Percobaan perbandingan antara kecepatan program worcount dengan menggunakan hadoop mapreduce dan java sudah dilakukan. Yang dimana Java lebih cepat daripada Hadoop dalam kebanyakan kasus, kecuali untuk file 10GB di mana perbedaan kecepatan tidak signifikan.
+Ada beberapa faktor yang dapat menjelaskan mengapa Hadoop bisa membutuhkan lebih banyak waktu daripada Java dalam beberapa skenario:
+- Overhead Hadoop
+  Hadoop memiliki beberapa overhead tambahan yang harus diatasi dalam lingkungan yang didistribusikan. Proses ini dapat memakan waktu yang signifikan, terutama dalam kasus pengolahan data yang relatif kecil seperti file-file berukuran 1MB hingga 1GB. Jadi, dalam file kecil ini, overhead Hadoop menyebabkan waktu eksekusi yang lebih lama.
+- Latensi jaringan
+  Dalam Hadoop, tugas-tugas pemetaan (mapping) dan pengurutan (reducing) dijalankan pada beberapa mesin dalam sebuah cluster. Komunikasi antara tugas-tugas ini melalui jaringan membutuhkan waktu yang lebih lama dibandingkan dengan pemrosesan lokal dalam Java biasa
+- Didesain untuk big data
+  Hadoop dirancang untuk menangani pemrosesan data yang sangat besar. Dalam kasus-kasus di mana ukuran file yang diuji cukup besar (diatas 10GB), Hadoop dapat menghasilkan hasil runtime yang lebih cepat dibanding dengan Java biasa. Karena Hadoop dapat memanfaatkan distribusi dan paralelisasi data untuk memproses file yang sangat besar dengan memecahnya menjadi bagian-bagian yang lebih kecil dan memprosesnya secara bersamaan.
+
+## Kesimpulan
+Dari percobaan yang telah dilakukan didapat kesimpulan bahwa Hadoop MapReduce lebih lambat daripada program Java biasa dalam pengolahan data berukuran kecil (dibawah 10GB) karena overhead Hadoop dan latensi jaringan. Namun, saat ukuran file menjadi sangat besar (diatas 10GB), Hadoop dapat memberikan keuntungan dalam hal skalabilitas dan memanfaatkan arsitektur distribusi untuk memproses data dengan efisien sehingga akan lebih cepat dibanding Java pada data yang sangat besar.
+
